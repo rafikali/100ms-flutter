@@ -128,7 +128,7 @@ class _MeetingScreenControllerState extends State<MeetingScreenController> {
           null) {
         _meetingStore.allowScreenRotation(true);
       } else {
-        _meetingStore.allowScreenRotation(false);
+        _meetingStore.allowScreenRotation(true);
       }
     });
   }

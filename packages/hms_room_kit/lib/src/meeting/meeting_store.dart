@@ -1665,8 +1665,8 @@ class MeetingStore extends ChangeNotifier
       SystemChrome.setPreferredOrientations([
         DeviceOrientation.landscapeRight,
         DeviceOrientation.landscapeLeft,
-        DeviceOrientation.portraitUp,
-        DeviceOrientation.portraitDown
+        // DeviceOrientation.portraitUp,
+        // DeviceOrientation.portraitDown
       ]);
     } else {
       SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
