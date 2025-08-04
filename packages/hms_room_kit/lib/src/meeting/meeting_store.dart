@@ -345,6 +345,7 @@ class MeetingStore extends ChangeNotifier
     WidgetsBinding.instance.removeObserver(this);
     hmsException = null;
     _hmsSDKInteractor.leave(hmsActionResultListener: this);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   }
 
   Future<void> toggleMicMuteState() async {
@@ -1672,6 +1673,15 @@ class MeetingStore extends ChangeNotifier
       SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     }
     isScreenRotationAllowed = allowRotation;
+    notifyListeners();
+  }
+
+  void setImmersiveMode(bool immersiveMode) {
+    if (immersiveMode) {
+      SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+    } else {
+      SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    }
     notifyListeners();
   }
 

@@ -127,8 +127,10 @@ class _MeetingScreenControllerState extends State<MeetingScreenController> {
               .roleLayoutData?.screens?.conferencing?.hlsLiveStreaming !=
           null) {
         _meetingStore.allowScreenRotation(true);
+        _meetingStore.setImmersiveMode(true);
       } else {
         _meetingStore.allowScreenRotation(true);
+        _meetingStore.setImmersiveMode(true);
       }
     });
   }
